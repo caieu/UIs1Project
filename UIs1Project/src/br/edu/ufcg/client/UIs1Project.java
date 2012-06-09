@@ -49,8 +49,9 @@ public class UIs1Project implements EntryPoint {
 
 		// Add the nameField and sendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
-		RootPanel.get("nameFieldContainer").add(nameField);
-		RootPanel.get("sendButtonContainer").add(sendButton);
+		RootPanel rootPanel = RootPanel.get("nameFieldContainer");
+		rootPanel.add(nameField);
+		RootPanel.get("sendButtonContainer").add(sendButton, 37, 62);
 		RootPanel.get("errorLabelContainer").add(errorLabel);
 
 		// Focus the cursor on the name field when the app loads

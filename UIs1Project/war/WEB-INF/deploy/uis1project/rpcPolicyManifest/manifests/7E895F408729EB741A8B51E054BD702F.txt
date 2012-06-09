@@ -1,0 +1,2 @@
+serviceClass: br.edu.ufcg.client.GreetingService
+path: ECD60A4571A820BF7448414873A3FE0D.gwt.rpc
