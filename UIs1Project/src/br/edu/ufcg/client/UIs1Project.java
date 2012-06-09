@@ -16,6 +16,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.PasswordTextBox;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -41,7 +42,7 @@ public class UIs1Project implements EntryPoint {
 	public void onModuleLoad() {
 		final Button sendButton = new Button("Send");
 		final TextBox nameField = new TextBox();
-		nameField.setText("GWT User");
+		nameField.setText("Login");
 		final Label errorLabel = new Label();
 
 		// We can add style names to widgets
@@ -50,12 +51,16 @@ public class UIs1Project implements EntryPoint {
 		// Add the nameField and sendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
 		RootPanel rootPanel = RootPanel.get("nameFieldContainer");
-		rootPanel.add(nameField);
-		RootPanel.get("sendButtonContainer").add(sendButton, 37, 62);
+		rootPanel.add(nameField, 75, 106);
+		RootPanel.get("sendButtonContainer").add(sendButton, 267, 122);
 		RootPanel.get("errorLabelContainer").add(errorLabel);
 
 		// Focus the cursor on the name field when the app loads
 		nameField.setFocus(true);
+		
+		PasswordTextBox pswrdtxtbxSenha = new PasswordTextBox();
+		pswrdtxtbxSenha.setText("Senha");
+		rootPanel.add(pswrdtxtbxSenha, 85, 146);
 		nameField.selectAll();
 
 		// Create the popup dialog box
